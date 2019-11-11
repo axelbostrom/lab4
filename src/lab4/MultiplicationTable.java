@@ -5,7 +5,6 @@ public class MultiplicationTable extends ArithmeticTable {
 	public MultiplicationTable(int rows, int cols) {
 		
 		super(rows, cols);
-		//super.print();
 		
 	}
 

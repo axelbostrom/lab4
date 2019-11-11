@@ -5,12 +5,12 @@ public abstract class ArithmeticTable{
 	int rows;
 	int cols;
 	
-	public ArithmeticTable(int rows, int cols) {
+	public ArithmeticTable(Operation op, int rows, int cols) {
 		this.rows = rows;
 		this.cols = cols;
 	}
 	
-	public abstract int evaluate(int x, int y);
+	public abstract int evaluate(int x , int y);
 	
 	public void print() {
 		
@@ -26,7 +26,6 @@ public abstract class ArithmeticTable{
 		System.out.print("-----+");
 		for (int k = 0; k <= nbrSize * cols + nbrSize; k++) {
 			System.out.format("-");
-			
 		}
 		System.out.println();
 		
@@ -34,11 +33,11 @@ public abstract class ArithmeticTable{
 		for (int i = 0; i <= rows; i++) {
 			System.out.format("%4d |", i);
 			
+			//Räkning, skickas till evaluate
 			for (int j = 0; j <= cols; j++) {
 				System.out.format(nSize ,  evaluate(i, j));
 			}
 			System.out.println();
-				
 		}
 	}
 }

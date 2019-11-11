@@ -5,7 +5,6 @@ public class AdditionTable extends ArithmeticTable {;
 	public AdditionTable(int rows, int cols) {
 		
 		super(rows, cols);
-		//super.print();
 		
 	}
 

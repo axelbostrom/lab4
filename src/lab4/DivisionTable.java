@@ -5,8 +5,7 @@ public class DivisionTable extends ArithmeticTable {
 	public DivisionTable(int rows, int cols) {
 		
 		super(rows, cols);
-		//super.print();
-		
+
 	}
 
 	public int evaluate(int x, int y) {
