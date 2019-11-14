@@ -1,16 +1,20 @@
 package lab4;
 
-public abstract class ArithmeticTable{
+public class ArithmeticTable{
 
 	int rows;
 	int cols;
+	Operation op;
 	
 	public ArithmeticTable(Operation op, int rows, int cols) {
 		this.rows = rows;
 		this.cols = cols;
+		this.op = op;
 	}
 	
-	public abstract int evaluate(int x , int y);
+	public int evaluate(int x , int y) {
+		return 0;
+	}
 	
 	public void print() {
 		
@@ -35,7 +39,7 @@ public abstract class ArithmeticTable{
 			
 			//Räkning, skickas till evaluate
 			for (int j = 0; j <= cols; j++) {
-				System.out.format(nSize ,  evaluate(i, j));
+				System.out.format(nSize , op.evaluate(i, j));
 			}
 			System.out.println();
 		}

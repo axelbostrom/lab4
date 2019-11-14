@@ -17,23 +17,31 @@ public class Main {
 		int tal2 = scan.nextInt(); //Kolumner
 		ArithmeticTable table = null;
 		
-
+		
 		switch (räknesätt.charAt(0)) {
 		
 			case '*':
-				table = new MultiplicationTable(tal1,tal2);
+				//table = new MultiplicationTable(tal1,tal2);
+				Operation multi = new MultiplikationOperation();
+				table = new ArithmeticTable(multi,tal1,tal2);
 				break;
 			
 			case '+':;
-				table = new AdditionTable(tal1,tal2);
+				//table = new AdditionTable(tal1,tal2);
+				Operation add = new AdditionsOperation();
+				table = new ArithmeticTable(add,tal1,tal2);
 				break;
 				
 			case '-':
-				table = new SubtractionTable(tal1,tal2);
+				//table = new SubtractionTable(tal1,tal2);
+				Operation sub = new DivisionOperation();
+				table = new ArithmeticTable(sub,tal1,tal2);
 				break;
 				
 			case '/':
-				table = new DivisionTable(tal1,tal2);
+				//table = new DivisionTable(tal1,tal2);
+				Operation div = new DivisionOperation();
+				table = new ArithmeticTable(div,tal1,tal2);
 				break;
 		}
 		
