@@ -11,12 +11,12 @@ public class Main {
 		
 
 		System.out.println("Ange ett tal: ");
-		int tal1 = scan.nextInt(); //Rader
+		int tal1 = scan.nextInt(); //Kolumner
 		
 		System.out.println("Ange ett ytterligare tal: ");
-		int tal2 = scan.nextInt(); //Kolumner
+		int tal2 = scan.nextInt(); //Rader
 		ArithmeticTable table = null;
-		
+		scan.close();
 		
 		switch (räknesätt.charAt(0)) {
 		
@@ -34,7 +34,7 @@ public class Main {
 				
 			case '-':
 				//table = new SubtractionTable(tal1,tal2);
-				Operation sub = new DivisionOperation();
+				Operation sub = new SubtractionOperation();
 				table = new ArithmeticTable(sub,tal1,tal2);
 				break;
 				

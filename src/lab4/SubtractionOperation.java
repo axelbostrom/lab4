@@ -7,12 +7,12 @@ public class SubtractionOperation implements Operation {
 		return '-';
 	}
 
-	public int width(int rows, int cols) {
+	public int width(int cols, int rows) {
 		return cols;
 	}
 
 	public int evaluate(int a, int b) {
-		return a-b;
+		return b-a;
 	}
 	
 }

@@ -6,7 +6,7 @@ public class ArithmeticTable{
 	int cols;
 	Operation op;
 	
-	public ArithmeticTable(Operation op, int rows, int cols) {
+	public ArithmeticTable(Operation op, int cols, int rows) {
 		this.rows = rows;
 		this.cols = cols;
 		this.op = op;
@@ -22,7 +22,7 @@ public class ArithmeticTable{
 		String nSize = "%" + nbrSize + "d";
 		
 		//Första raden, header
-		System.out.format("   * |");
+		System.out.format("   " + op.symbol() + " |");
 		for (int i = 0; i <= cols; i++) {
 			System.out.format(nSize ,  i);
 		}

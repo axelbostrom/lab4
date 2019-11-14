@@ -7,15 +7,15 @@ public class DivisionOperation implements Operation {
 		return '/';
 	}
 	
-	public int width(int rows, int cols) {
+	public int width(int cols, int rows) {
 		return cols;
 	}
 
 	public int evaluate(int a, int b) {
-		if (b == 0) {
+		if (a == 0) {
 			return 0;
-		}else {
-			return a/b;
+		} else {
+			return (b/a);
 		}
 	}
 	
